@@ -18,19 +18,17 @@
         }
         
     </style>
-    <!--Function that saves entered data to be used in CV -->
       <script>
 
         
         function onFormSubmit(){
-          
 
           validateForm();
           var inputname= document.getElementById("name");
           var inputaddress= document.getElementById("address");
           var inputEmail= document.getElementById("email");
           var inputPhone= document.getElementById("phone");
-          var inputUrl= document.getElementById("Li");
+          var inputUrl= document.getElementById("li");
           var inputGender= document.getElementById("gender");
 
           localStorage.setItem("fullName", inputname.value);
@@ -41,29 +39,31 @@
           localStorage.setItem("gender", inputGender.value);
 
         }
-/* Validating entered*/
-       
-function validateForm(){
+
+        function validateForm(){
             
 	var name = document.forms["myForm"]["name"].value;
 	var email = document.forms["myForm"]["email"].value;
-  var phone = document.forms["myForm"]["phone"].value;
-  var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-  var phoneformat = /^\d{10}$/;
-  var letters = /^[A-Za-z]+$/;
+    var phone = document.forms["myForm"]["phone"].value;
+    var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+    var phoneformat = /^\d{10}$/;
+    var letters = /^[A-Za-z]+$/;
 	
+  /* Name Validation*/
+	if (name.length>1 || name.match(letters)) {
+        
+      }
+      else{
+      alert("You have entered an invalid name")
+  }
+
+
 /*Phone Validation*/
 if (phone.length>1 || phone.match(phoneformat)) {
-    return true;
+    
 }
     else{
-        alert("You have entered an invalid phone,please try again !")
-    }
-/* Name Validation*/
-	if (name.length>1 || name.match(letters)) {
-        return true;}
-        else{
-        alert("You have entered an invalid name, please try again!")
+        alert("You have entered an invalid phone")
     }
 
     /*Email Validation*/
@@ -72,7 +72,7 @@ if (phone.length>1 || phone.match(phoneformat)) {
     if(email.length>1|| email.match(mailformat))
           {
 
-    return true;
+    
        }
      else
       {
@@ -80,7 +80,14 @@ if (phone.length>1 || phone.match(phoneformat)) {
     document.form1.text1.focus();
     return false;
       }
+        
+    
+    
    
+             
+    if(name.length<1 || email.length<1 || phone.length<1 || message.length<1){
+       	return false;
+    }            
 }
         </script>
     
@@ -93,7 +100,6 @@ if (phone.length>1 || phone.match(phoneformat)) {
     <br>
       <h3>RESUME CONTACT DETAILS</h3>
       <p>Hello, Please fill in the following details which will be used in creating your resume.</p>
-      <a href="index.html">After you have filled the form,<br> please click here to view your customized resume </a>
       
       <label for="full-name">Full Name</label>
       <input type="text" name="name" minlength="5" id="name" />
@@ -104,12 +110,12 @@ if (phone.length>1 || phone.match(phoneformat)) {
      <label for="phone">Phone Number</label>
       <input type="number" name="phone" id="phone"  minlength="10" maxlength="20" />
       <label for= "LinkedIn">LinkedIn URL</label>
-      <input type="url" name="LinkedIn" id="Li" />
+      <input type="url" name="LinkedIn" id="li" />
       <label for="Gender">Gender</label>
       <select name="gender" id="gender" tabindex="0">
         <option value="">Please select your gender</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
 
       </select>
       <br>
@@ -118,7 +124,7 @@ if (phone.length>1 || phone.match(phoneformat)) {
       <input class= "button" type="submit" value="Send">
       <br>
       <br>
-      
+      <a href="index.html">You can view your customized resume here </a>
      
      
     </form>
