@@ -18,78 +18,7 @@
         }
         
     </style>
-      <script>
-
-        
-        function onFormSubmit(){
-
-          validateForm();
-          var inputname= document.getElementById("name");
-          var inputaddress= document.getElementById("address");
-          var inputEmail= document.getElementById("email");
-          var inputPhone= document.getElementById("phone");
-          var inputUrl= document.getElementById("li");
-          var inputGender= document.getElementById("gender");
-
-          localStorage.setItem("fullName", inputname.value);
-          localStorage.setItem("address", inputaddress.value);
-          localStorage.setItem("email", inputEmail.value);
-          localStorage.setItem("phone", inputPhone.value);
-          localStorage.setItem("url", inputUrl.value);
-          localStorage.setItem("gender", inputGender.value);
-
-        }
-
-        function validateForm(){
-            
-	var name = document.forms["myForm"]["name"].value;
-	var email = document.forms["myForm"]["email"].value;
-    var phone = document.forms["myForm"]["phone"].value;
-    var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-    var phoneformat = /^\d{10}$/;
-    var letters = /^[A-Za-z]+$/;
-	
-  /* Name Validation*/
-	if (name.length>1 || name.match(letters)) {
-        
-      }
-      else{
-      alert("You have entered an invalid name")
-  }
-
-
-/*Phone Validation*/
-if (phone.length>1 || phone.match(phoneformat)) {
-    
-}
-    else{
-        alert("You have entered an invalid phone")
-    }
-
-    /*Email Validation*/
-    
-        
-    if(email.length>1|| email.match(mailformat))
-          {
-
-    
-       }
-     else
-      {
-    alert("You have entered an invalid email address! Please reenter your details again");    
-    document.form1.text1.focus();
-    return false;
-      }
-        
-    
-    
-   
-             
-    if(name.length<1 || email.length<1 || phone.length<1 || message.length<1){
-       	return false;
-    }            
-}
-        </script>
+      
     
   </head>
   <body>
@@ -129,5 +58,78 @@ if (phone.length>1 || phone.match(phoneformat)) {
      
     </form>
   </body>
+  <script>
+
+        
+    function onFormSubmit(){
+
+     
+      validateForm();
+      var inputname= document.getElementById("name");
+      var inputaddress= document.getElementById("address");
+      var inputEmail= document.getElementById("email");
+      var inputPhone= document.getElementById("phone");
+      var inputUrl= document.getElementById("li");
+      var inputGender= document.getElementById("gender");
+
+      localStorage.setItem("fullName", inputname.value);
+      localStorage.setItem("address", inputaddress.value);
+      localStorage.setItem("email", inputEmail.value);
+      localStorage.setItem("phone", inputPhone.value);
+      localStorage.setItem("url", inputUrl.value);
+      localStorage.setItem("gender", inputGender.value);
+
+    }
+
+    function validateForm(){
+        
+var name = document.forms["myForm"]["name"].value;
+var email = document.forms["myForm"]["email"].value;
+var phone = document.forms["myForm"]["phone"].value;
+var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+var phoneformat = /^\d{10}$/;
+var letters = /^[A-Za-z]+$/;
+
+/* Name Validation*/
+if (name.length>1 || name.match(letters)) {
+    
+  }
+  else{
+  alert("You have entered an invalid name")
+}
+
+
+/*Phone Validation*/
+if (phone.length>1 || phone.match(phoneformat)) {
+
+}
+else{
+    alert("You have entered an invalid phone")
+}
+
+/*Email Validation*/
+
+    
+if(email.length>1|| email.match(mailformat))
+      {
+
+
+   }
+ else
+  {
+alert("You have entered an invalid email address! Please reenter your details again");    
+document.form1.text1.focus();
+return false;
+  }
+    
+
+
+
+         
+if(name.length<1 || email.length<1 || phone.length<1 || message.length<1){
+     return false;
+}            
+}
+    </script>
   
 </html>

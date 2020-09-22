@@ -32,13 +32,13 @@
         </style>
         
       
-    </head>
+    
 
         <h1 id="name" >ASHESI RESUME TEMPLATE CUSTOMIZED</h1>
         <h1 id="address" ></h1>
-        <h1 id="phone" >phone</h1>
-        <h1 id="email" >Email</h1>
-        <h1 id="Link" >Li</h1>
+        <h1 id="tphone" ></h1>
+        <h1 id="email" ></h1>
+        <h1 id="Link" ></h1>
       
     </head>
 
@@ -220,7 +220,7 @@
     var fullName = localStorage.getItem("fullName");
     var address = localStorage.getItem("address");
     var email = localStorage.getItem("email");
-    var phone = localStorage.getItem("phone");
+    var tphone = localStorage.getItem("phone");
     var url = localStorage.getItem("url");
     var gender = localStorage.getItem("gender");
 
@@ -228,11 +228,9 @@
     
     /*document.getElementById("name").innerHTML = fullName;*/
  document.getElementById("name").innerHTML = fullName;
-    document.getElementById("address").innerHTML = address;
-    document.getElementById("phone").innerHTML = phone;
-    document.getElementById("email").innerHTML = email;
-    document.getElementById("Link").innerHTML = url;
-    console.log(url);
+ document.getElementById("phone").innerHTML = tphone;
+ /*document.getElementById("name").innerHTML = fullName;*/
+   
 
     
     
@@ -241,4 +239,3 @@
 
 </script>
 
-</html>
