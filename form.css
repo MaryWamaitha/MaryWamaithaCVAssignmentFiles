@@ -1,0 +1,98 @@
+/* form.css */
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+
+
+body {
+  background-color: whitesmoke;
+  font-family: "Nunito", sans-serif;
+  margin: 0 15%;
+  text-align:center;
+}
+
+h3,
+label {
+  text-transform: uppercase;
+}
+
+.alert {
+  width: 80vw;
+  margin: 2rem auto;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
+  display: none;
+}
+
+
+
+label {
+  margin: 1rem 0 0;
+  display: block;
+}
+
+input {
+  font-size: 0.875em;
+  width: 50%;
+  height: 40px;
+  padding: 0px 15px 0px 15px;
+  background: whitesmoke;
+  outline: none;
+  color: #000;
+  border: none;
+  border-radius: 3px;
+}
+
+input:hover {
+  background: whitesmoke;
+  color: black;
+}
+
+.button[type="submit"] {
+  background-color: #349bab;
+  width: calc((100% / 2) - 3px);
+  display: inline-block;
+  color: white;
+  font-weight: 600;
+  height: 2.8rem;
+  border: none;
+  font-family: Nunito;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+
+
+
+select {
+  width: 50%;
+  height: 40px;
+  background: whitesmoke;
+  border: none;
+  padding: 0 0 0 0.5rem;
+  outline: none;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: #349bab solid 1px;
+}
+
+
+
+
+form {
+
+    background-color:white ;
+    border: 1px black;
+margin-top: 30px;
+margin-bottom: 30px;
+margin-right: 150px;
+margin-left:150px;
+box-align:center;
+
+}
+
